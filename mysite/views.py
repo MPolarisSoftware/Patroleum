@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from django.urls import reverse  ##
 from django.contrib.auth import login, authenticate, logout
 from .forms import UserSignUpForm, UserSignInForm
 from django.contrib.sites.shortcuts import get_current_site

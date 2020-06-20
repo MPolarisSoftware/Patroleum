@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mysite',
+    'paypal.standard.ipn',
+    'payment',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +129,7 @@ EMAIL_HOST_PASSWORD = 'lionking103'
 EMAIL_PORT = 587
 
 LOGIN_URL = 'signin'
+
+# django-paypal settings
+PAYPAL_RECEIVER_EMAIL = 'myhot31@hotmail.com'
+PAYPAL_TEST = True

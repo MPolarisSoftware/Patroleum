@@ -91,9 +91,9 @@
         </div>
     </div>
 </div>
-{#<div id="pricing" class="container-fluid">#}
-{#    <div id="order_now"></div>#}
-{#</div>#}
+<!-- <div id="pricing" class="container-fluid">
+    <div id="order_now"></div>
+</div> -->
 
 <table border="0" align="center" valign="top" bgcolor="#FFFFFF" style="width:39%">
      <tr>
@@ -208,31 +208,31 @@
 <script src="{% static 'mysite/js/bootstrap-slider.min.js' %}"></script>
 <script src="{% static 'mysite/js/slick.min.js' %}"></script>
 <script src="{% static 'mysite/js/main.js' %}"></script>
-{#<script src="https://www.paypal.com/sdk/js?client-id=AT_UGlliwpOGbA1sNJNa4Idi4_vEBRbGPBp22NQGXTs0kltlL5MrNMg9eHyidgDac8KLs_cIBUhtaoeA&currency=USD"></script>#}
+<!-- <script src="https://www.paypal.com/sdk/js?client-id=AT_UGlliwpOGbA1sNJNa4Idi4_vEBRbGPBp22NQGXTs0kltlL5MrNMg9eHyidgDac8KLs_cIBUhtaoeA&currency=USD"></script> -->
 <script src="https://www.paypal.com/sdk/js?components=hosted-fields,buttons&client-id=AT_UGlliwpOGbA1sNJNa4Idi4_vEBRbGPBp22NQGXTs0kltlL5MrNMg9eHyidgDac8KLs_cIBUhtaoeA" data-client-token="eyJicmFpbnRyZWUiOnsiYXV0aG9yaXphdGlvbkZpbmdlcnByaW50IjoiMTkxNWEwMmI0ZWE4ZGJhZWJmMjk2Yzc4Zjc0NjFjMzJkYmRkZWZkNTE0YmNkOTJjNmMwYjQ4Njg0ZjNmZjk1ZnxtZXJjaGFudF9pZD1yd3dua3FnMnhnNTZobTJuJnB1YmxpY19rZXk9NjNrdm4zN3Z0MjlxYjRkZiZjcmVhdGVkX2F0PTIwMjAtMDUtMDRUMTE6MTg6MDAuNzE1WiZjdXN0b21lcl9pZD1SeXVqaXNvbmciLCJ2ZXJzaW9uIjoiMy1wYXlwYWwifSwicGF5cGFsIjp7ImFjY2Vzc1Rva2VuIjoiQTIxQUFGeWpYOUdqS1VZemdXQ1AySmozNmlGa1J0cVhWSWFDWFVzcTVJaWEtajdmU2t1Rkt6eXAxcGVfSl9aN2FXRHFWUDB0Z0drRm45dHlnbDdGdUNpTDVELUdOU0M5QSJ9fQ=="></script>
-{#<script>#}
-{#      var price = {{price}}#}
-{#      paypal.Buttons({#}
-{#        createOrder: function(data, actions) {#}
-{#          return actions.order.create({#}
-{#            purchase_units: [{#}
-{#              amount: {#}
-{#                value: price#}
-{#              }#}
-{#            }]#}
-{#          });#}
-{#        },#}
-{#        onApprove: function(data, actions) {#}
-{#          return actions.order.capture().then(function(details) {#}
-{#            alert('Transaction completed by ' + details.payer.name.given_name);#}
-{#          });#}
-{#        }#}
-{#      }).render('#order_now');#}
-{#</script>#}
+<!-- <script>
+      var price = {{price}}
+      paypal.Buttons({
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: price
+              }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Transaction completed by ' + details.payer.name.given_name);
+          });
+        }
+      }).render('#order_now');
+</script> -->
 
  <script>
      //Displays PayPal buttons
-     var price = {{price}}
+     var price = {price}
 
      paypal.Buttons({
        commit: false,
